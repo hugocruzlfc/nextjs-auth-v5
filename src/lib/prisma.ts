@@ -7,6 +7,7 @@ const prismaClientSingleton = () => {
     connectionString: process.env.DATABASE_URL,
   });
   const adapter = new PrismaNeon(neon);
+
   return new PrismaClient({ adapter });
 };
 
