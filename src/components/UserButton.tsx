@@ -1,5 +1,5 @@
 import avatarPlaceholder from "@/assets/images/avatar_placeholder.png";
-import { LogOut, Settings } from "lucide-react";
+import { LogOut, Settings, Lock } from "lucide-react";
 import { User } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,12 +47,14 @@ export default function UserButton({ user }: UserButtonProps) {
             </Link>
           </DropdownMenuItem>
           {/* TODO: Show this only for admins */}
-          {/* <DropdownMenuItem asChild>
-                <Link href="/admin">
-                  <Lock className="mr-2 h-4 w-4" />
-                  Admin
-                </Link>
-              </DropdownMenuItem> */}
+          {user.role === "admin" && (
+            <DropdownMenuItem asChild>
+              <Link href="/admin">
+                <Lock className="mr-2 h-4 w-4" />
+                Admin
+              </Link>
+            </DropdownMenuItem>
+          )}
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
