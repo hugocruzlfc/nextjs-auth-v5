@@ -7,6 +7,9 @@ import GitHub from "next-auth/providers/github";
 import { Adapter } from "next-auth/adapters";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  theme: {
+    logo: "/next.svg",
+  },
   adapter: PrismaAdapter(prisma) as Adapter,
   providers: [Google, GitHub],
 });
