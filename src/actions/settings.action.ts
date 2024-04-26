@@ -1,12 +1,12 @@
 "use server";
 
-import { auth } from "@/auth";
-import prisma from "@/lib/prisma";
+//import { auth } from "@/auth";
+import { prisma, getSession } from "@/lib";
 import { UpdateProfileValues, updateProfileSchema } from "@/lib/validations";
 import { revalidatePath } from "next/cache";
-
 export async function updateProfile(values: UpdateProfileValues) {
-  const session = await auth();
+  //const session = await auth();
+  const session = await getSession();
   const userId = session?.user?.id;
 
   if (!userId) {
