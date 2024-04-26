@@ -39,6 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ![Auth strategies](image.png)
 
-## Tutorial Video
-
-[(https://www.youtube.com/watch?v=bMYZSi_LZ2w)](https://www.youtube.com/watch?v=bMYZSi_LZ2w)
+[Tutorial Video](https://www.youtube.com/watch?v=bMYZSi_LZ2w)
